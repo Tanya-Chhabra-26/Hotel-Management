@@ -1,0 +1,834 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  padding: 40px 60px;
+  background-size: cover;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;  
+}
+.container1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto auto;
+}
+.container2{
+  width: 100%;
+  max-width: 1200px;
+}
+.banner {
+    background-image: url('https://img.freepik.com/premium-photo/elegant-white-bedroom-with-draped-curtains-arched-windows-exuding-luxury-tranquility_1301081-4375.jpg?uid=R194680423&ga=GA1.1.862729762.1743744486&semt=ais_hybrid&w=740'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 40px;
+    justify-content: space-around;
+      width: 100%;
+}
+  .banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+  .banner * {
+    z-index: 1;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    font: 10px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .host-btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .vl {
+    border-left: 2px solid #999;
+    height: 45px;
+    }
+  .search-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .heading-wrapper{
+    display: flex;
+    flex: 1;
+    gap: 600px;
+  }
+  .map-location{
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .map-location h3{
+    font: 20px;
+  }
+  .map-location img{
+    border: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+  
+  .search-tabs {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .search-tabs h2 {
+    font-size: 28px;
+    color: #fff;
+  }
+  
+  .tabs {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    
+  }
+  
+  .tabs li {
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    padding-bottom: 5px;
+  }
+  
+  .tabs li.active {
+    border-bottom: 2px solid #fff;
+    font-weight: bold;
+  }
+  
+  .search-box {
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    display: flex;
+    padding: 20px 20px;
+    gap: 11px;
+    flex: 1;
+    width: 850px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-group label {
+    font-size: 11px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .search-btn {
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+  }
+  .property-listing {
+    padding: 40px 40px;
+    background: transparent;
+    width:100%;
+    margin: 0 auto; 
+    max-width: 1200px;
+  }
+  
+  .property-listing h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .property-listing h2 span {
+    display: block;
+  }
+  
+  .property-listing h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #333;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .listing-cards {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex:wrap;
+  }
+  .property-card {     
+    width: 25%;
+    height: 300px;
+    border-radius: 12px;
+    padding: 16px;
+    /* flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    min-width: 220px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-overlay {
+    background: rgba(255, 255, 255, 0.6);
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .like-icon {
+    align-self: flex-end;
+    font-size: 22px;
+    color: #666;
+    cursor: pointer;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .card-logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .card-text h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    white-space: normal; 
+    word-break: break-word;
+  }
+  
+  .card-text p {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+  }
+ 
+  
+ 
+  .hosting-content{
+    background-color: transparent;
+    background-image: url('https://img.freepik.com/free-vector/watercolor-abstract-background_23-2149126010.jpg?uid=R194680423&ga=GA1.1.862729762.1743744486&semt=ais_hybrid&w=740'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .hosting-content h2{
+    font-size: 32px;
+    font-weight: 700;
+    color: #4f4f4f;
+    position: relative;
+    margin-bottom: 17px;
+  }
+  .hosting-content p{
+      color: #4f4f4f;
+      font-size: 22px;
+      margin-bottom: 19px;
+    }
+    .tryhost-btn{
+    background-color: #4f4f4f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    width: 20%;
+    }
+
+    .property-section {
+      background-color: white;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    .property-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
+    
+    .property-card-2 {
+      background-color: white;
+      border-radius: 10px;
+      flex: 1 1 calc(25% - 20px);
+      max-width: calc(25% - 20px);
+      min-width: 220px;
+      flex: 1 1 250px;
+      max-width: 280px;
+      margin: auto;
+    }
+    
+    
+    .property-image {
+      position: relative;
+      height: 200px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 5px;
+    }
+    
+    .property-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    .price {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: white;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .fav-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color: #999;
+      cursor: pointer;
+    }
+    .fav-icon:hover {
+      color: white;
+    }
+    
+    .property-details {
+      padding: 15px;
+    }
+    
+    .property-details h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+    
+    .property-details p {
+      font-size: 14px;
+      color: #777;
+      margin: 5px 0 10px;
+    }
+    
+    .property-features span {
+      font-size: 14px;
+      margin-right: 10px;
+      color: #333;
+    }    
+    .icons{
+      height:15px;
+      width: 15px;
+      margin-top: 12px;
+    }
+    
+    .blog-button{
+      text-align: center;
+    }
+    .blog-btn{
+      background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+  }
+.btn {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px 0 0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn.dark {
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+.app-icons{
+  height: 24px;
+  width: 24px;
+  margin-top: 2px;
+}
+.app-icons,
+.btn-text{
+  vertical-align:middle;
+}
+.download-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+  padding: 40px 60px;
+  background-color: #f1f2f4;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+.app-text{
+  width: 50%;
+  padding: 10px 10px;
+  flex: 1 1 60%;
+  padding: 10px;
+}
+.app-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.app-image{
+  width: 50%;
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center; 
+}
+.app-text p {
+  color: #888;
+}
+.app-image img {
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  mix-blend-mode: multiply;
+  margin: 0 auto; 
+}
+.discover-section {
+  background-color: #fff;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 80px;
+  align-items: center;
+  justify-content: center;
+}
+  
+
+.discover-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+.discover-text{
+  flex: 1;
+  max-width: 700px;
+  /* width: 50%; */
+}
+.discover-text h2 {
+  font-size: 32px;
+}
+.discover-text hr {
+  background-color: #333;
+  border: none;
+}
+.discover-text p {
+  color: #777;
+  line-height: 1.6;
+}
+.discover-links a {
+  font-weight: 600;
+  margin-right: 20px;
+  display: inline-block;
+  margin-top: 20px;
+  color: #333;
+  text-decoration: none;
+}
+.discover-image{
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.discover-image img{
+  width: 350px;
+  height: 350px;
+  border-radius: 10px;
+}
+.btn-dark{
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 15px;
+}    
+
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  gap: 20px;
+  padding: 0px 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.newletter-section{
+  width: 100%;
+  background-color:#e9ebed;
+  padding: 40px 20px;
+  max-width: 12000px;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+
+}
+
+.newsletter-text h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.newsletter-text p {
+  margin: 4px 0 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.newsletter-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 16px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background-color: #888;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 0 30px 30px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+}
+
+.newsletter-form button:hover {
+  background-color: #666;
+}
+
+.footer {
+  background-color: #f1f2f3;
+  padding: 60px 20px 30px;
+  font-family: sans-serif;
+  color: #333;
+  width: 100%;
+
+}
+
+
+.footer-content {
+  display: flex;
+  flex-wrap: 1;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #000;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+  section {
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .banner {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .heading-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-bar{
+    display: flex;
+    flex-direction: column;
+  }
+  .search-wrapper {
+    margin-top: 100px;
+    padding-bottom: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .input-group input {
+    font-size: 16px;
+  }
+
+  .search-btn {
+    height: -1002px;
+    width: -1002px;
+  }
+
+  .property-listing h2 {
+    font-size: 24px;
+
+  }
+
+  .listing-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .property-card {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .hosting-content {
+    padding: 20px;
+  }
+
+  .tryhost-btn {
+    width: 100%;
+  }
+
+  .download-app {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .app-text,
+  .app-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .discover-more {
+    flex-direction: column;
+    gap: 40px;
+
+  }
+
+  .discover-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .newsletter-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .newsletter-container,
+  .footer-content,
+  .download-app,
+  .discover-more {
+    padding: 0 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .newsletter-container input[type="email"],
+  .newsletter-container button {
+    width: 10%;
+  }
+
+  .app-text,
+  .app-image,
+  .footer-col {
+    width: 100%;
+    text-align: center;
+  }
+
+  .store-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}
